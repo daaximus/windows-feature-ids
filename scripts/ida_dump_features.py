@@ -317,7 +317,7 @@ def main():
                     f"{rdata_new} new features, {rdata_filled} IDs filled\n")
             out.flush()
 
-            out.write("[[FEATURE MAP]]\n")
+            out.write("[[FEATURE MAP]]\n") 
 
             for feature_name in sorted(features_found.keys()):
                 feature_id = features_found[feature_name]

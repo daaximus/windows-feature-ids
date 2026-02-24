@@ -137,7 +137,7 @@ $job_script = {
         Write-Output "<[job $job_id]> starting: $target_name"
         
         New-Item "$bin_dir\AnalysisResults.txt" -ItemType file -Force | Out-Null
-        [System.Diagnostics.Process]::Start("ida.exe","-c -A -S`"$script_root\ExtractFeatures.py`" $full_path").WaitForExit(10000000) | Out-Null
+        [System.Diagnostics.Process]::Start("ida.exe","-c -A -S`"$script_root\ida_dump_features.py`" $full_path").WaitForExit(10000000) | Out-Null
 		
         Remove-Item $processing_flag -ErrorAction SilentlyContinue
         New-Item $complete_flag -ItemType file -Force | Out-Null

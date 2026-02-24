@@ -123,7 +123,7 @@ def main():
             refs_sorted = ", ".join(sorted(data["refs"], key=str.lower))
             out.write(f"{name}={data['value']} ; ref(s): {refs_sorted}\n")
 
-    print(f"processed {file_count} files with feature maps.")
+    print(f"processed {file_count} files with feature maps.") 
     print(f"aggregated {len(aggregated)} unique features => {output_file}")
 
 
